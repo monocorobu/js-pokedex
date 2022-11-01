@@ -1,0 +1,118 @@
+/* cores 
+1º verde #14A06F
+2º verde #49d0b0
+3º verde do numero #46cbab
+4º verde agua #61e1ca
+*/
+
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    background-color: #49d0b0;
+    max-width: 100%;
+    color: #FFFFFF;
+}
+
+.pokemon .number {
+    color: #000000;
+    opacity: .3;
+    text-align: right;
+    font-size: .725rem;
+}
+
+.name {
+    color: #FFFFFF;
+    margin: .25rem;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.pokemon .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type {
+    font-weight: 700;
+    background-color: #61e1ca;
+    color: black;
+    min-width: 43px;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .725rem;
+    border-radius: 1rem;
+    filter: brightness(1.3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.details img {
+    border-style: none;
+    max-width: 100%;
+    height: 70px;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.paginacao button {
+    background-color: #6c79db;
+    color: white;
+    border: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 374px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .container {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+    .pokemons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .pokemon {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
